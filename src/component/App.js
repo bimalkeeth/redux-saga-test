@@ -10,12 +10,13 @@ class App  extends Component{
   }
 
   render() {
+    const users=this.props.users;
     return (
-        <div>Test</div>
+        <div style={{margin:'0 auto',padding:'20px',maxWidth:'600px'}}>Test</div>
     );
   }
 
 }
-export default connect(null,{
+export default connect(({users})=>({users}),{
   getUserRequest
 })(App)
